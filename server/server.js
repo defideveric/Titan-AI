@@ -40,8 +40,8 @@ app.post('/', async(req, res) => {
         })
     } catch (error) {
         console.log(error);
-        res.status(500).send( error || 'Something went wrong' );
+        res.status(500).send({ error })
     }
 })
 
-app.listen(5000, () => console.log('Server is running on http://localhost:5000'))
+app.listen(5000, () => console.log('Server is running on https://localhost:5000'))
