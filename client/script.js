@@ -81,14 +81,13 @@ const handleSubmit = async (e) => {
     chatContainer.scrollTop = chatContainer.scrollHeight;
 
     // specific message div 
-    const messageDiv = document.getElementById(uniqueId);
+    const messageDiv = document.getElementById(uniqueId)
 
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    //Fetch data from servers
     const response = await fetch('http://localhost:5000', {
-        method: "POST",
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
