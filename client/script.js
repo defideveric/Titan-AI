@@ -1,13 +1,13 @@
 import bot from './assets/bot.svg'
 import user from './assets/user.svg'
 
-const form = document.querySelector('form')
-const chatContainer = document.querySelector('#chat_container')
+const form = document.querySelector('form');
+const chatContainer = document.querySelector('#chat_container');
 
-let loadInterval
+let loadInterval;
 
 function loader(element) {
-    element.textContent = ''
+    element.textContent = '';
 
     loadInterval = setInterval(() => {
         // Update the text content of the loading indicator
@@ -85,7 +85,7 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   //fetch data from server
-  const response = await fetch('https://titan-5rgw.onrender.com/', {
+  const response = await fetch('http://titan-5rgw.onrender.com/', {
     method: 'POST',
     headers: {'Content-Type': 'application/json',},
     body: JSON.stringify({prompt: data.get('prompt')})});
