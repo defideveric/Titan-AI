@@ -85,7 +85,7 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   //fetch data from server
-  const response = await fetch('http://titan-5rgw.onrender.com/', {
+  const response = await fetch('https://titan-5rgw.onrender.com/', {
     method: 'POST',
     headers: {'Content-Type': 'application/json',},
     body: JSON.stringify({prompt: data.get('prompt')})});
